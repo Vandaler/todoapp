@@ -17,3 +17,26 @@ export async function GET() {
     });
   }
 }
+
+//req => {name:"", note:""}
+export async function POST(req: NextResponse) {
+  try{
+  const body = await req.json();
+  const res = await Todo.create(body);
+  return NextResponse.json({data: res})
+} catch(error){
+  return NextResponse.json({
+    error : error,
+  });
+}
+}
+
+
+export async function PUT() {
+  
+}
+
+
+export async function DELETE() {
+  
+}
