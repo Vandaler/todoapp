@@ -1,10 +1,14 @@
-import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
+      <h1>Todo App</h1>
+      <input type="text" name="todo" id="todo" />
+      <button type="submit">Add</button>
 
-
+      <ul>
+        
+      </ul>
     </div>
   );
 }
